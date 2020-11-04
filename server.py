@@ -14,6 +14,7 @@ def success():
 @route('/fail')
 def fail():
     fail()
+    return HTTPResponse(status=500, body="Fail page")
 
 def main():
     run(host='0.0.0.0', port=int(os.environ.get('PORT', 8080)))
