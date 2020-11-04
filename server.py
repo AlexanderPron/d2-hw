@@ -1,5 +1,6 @@
 from bottle import route, run
 import requests
+import os
 
 @route('/')
 def index():
@@ -10,7 +11,7 @@ def fail():
     return(f'<h2>FAilpage</h2><hr>')
 
 def main():
-    run(host='0.0.0.0', port=8080)
+    run(host='0.0.0.0', port=int(os.environ.get('PORT', 8080)))
     
 
 if __name__ == "__main__":
