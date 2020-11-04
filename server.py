@@ -10,7 +10,7 @@ def index():
 #     return(f'<h2>FAilpage</h2><hr>')
 
 def main():
-    run(host='localhost', port=5000)
+    run(host='localhost', port=8080)
     
 
 if __name__ == "__main__":
